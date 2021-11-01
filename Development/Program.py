@@ -1,0 +1,1 @@
+print("Basic,Fuctional,Data-Structured,Object Oriented programs In Python")
