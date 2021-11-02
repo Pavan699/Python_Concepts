@@ -11,13 +11,13 @@ import json
 ## List of json objects
 
 #To read open and read the json file
-myjsonFile = open('D:\Python\CFP-Class\Object Oriented Programs\Data.json','r')
-jsondata = myjsonFile.read()
+myjson_file = open('D:\Python\CFP-Class\Object Oriented Programs\Data.json','r')
+json_data = myjson_file.read()
 
 #Loading the data by using json.loads method
-Json_Obj = json.loads(jsondata) #Data is in Object format
+json_obj = json.loads(json_data) #Data is in Object format
 
-list = Json_Obj # there are 3 data's present so storing in the list format
+list = json_obj # there are 3 data's present so storing in the list format
 print(list)
 
 for i in range(len(list)): #for loop for accessing the objects in list
@@ -30,24 +30,24 @@ for i in range(len(list)): #for loop for accessing the objects in list
     print("Bill is : ",wg*pr) # calculating bill by using converted values 
 
 #String Format by using dumps
-Detail_Str = json.dumps(list)
-print(Detail_Str)
+data_str = json.dumps(list)
+print(data_str)
 
 
 
 ## Single Json Object
 
 #open and read the json file 
-myDetailsFile = open('D:\Python\CFP-Class\Object Oriented Programs\Details.json','r')
-persondata = myDetailsFile.read()
+my_details_file = open('D:\Python\CFP-Class\Object Oriented Programs\Details.json','r')
+person_data = my_details_file.read()
 
-Person_Obj = json.loads(persondata) # Load-String
+person_obj = json.loads(person_data) # Load-String
 print("Person Details :")
-print("Name :",Person_Obj['name'])
-print("Address :",Person_Obj['address'])
-print("City :",Person_Obj['city'])
-print("Phone No. :",Person_Obj['phone'])
+print("Name :",person_obj['name'])
+print("Address :",person_obj['address'])
+print("City :",person_obj['city'])
+print("Phone No. :",person_obj['phone'])
 
 #dumps => dump-String function
-Person_str = json.dumps(Person_Obj)
-print(Person_str)
+person_str = json.dumps(person_obj)
+print(person_str)

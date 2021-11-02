@@ -6,12 +6,12 @@
 @Title : Harmonic Number : To get the harmonic value of entered number
 '''
 # User Input H_Number and Harmonic_Result to store the result
-H_Number = int(input("Enter a range to get harmonic value: "))
-Harmonic_Result = 0
+harmonic_number = int(input("Enter a range to get harmonic value: "))
+harmonic_result = 0
 
-if H_Number < 0 or H_Number == 0: #if 0 or less than zero 
+if harmonic_number < 0 or harmonic_number == 0: #if 0 or less than zero 
     print("Range is invalid")
 else:
-    for i in range(1,H_Number+1): #iterartion is Starting from 1 
-        Harmonic_Result += 1/i
-    print(f"Harmonic value of {H_Number} is : ",Harmonic_Result)
+    for i in range(1,harmonic_number+1): #iterartion is Starting from 1 
+        harmonic_result += 1/i
+    print(f"Harmonic value of {harmonic_number} is : ",harmonic_result)

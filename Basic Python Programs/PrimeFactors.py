@@ -6,15 +6,15 @@
 @Title : Prime Factor : Finding the prime factors of the entered number
 '''
 # UserInput as Integer number
-Number = int(input("Enter a number to get it's prime factors: "))
+number = int(input("Enter a number to get it's prime factors: "))
 prime_factors = [] # list to store the factors
 factor = 2 
 
 # Looping till the quotient is less than divisor.
-while factor <= Number:
-    if Number % factor == 0:
+while factor <= number:
+    if number % factor == 0:
         prime_factors.append(factor) # append method to add the factor in list
-        Number = Number/factor
+        number = number/factor
     else:
         factor += 1
 
