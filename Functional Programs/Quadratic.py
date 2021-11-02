@@ -9,7 +9,6 @@
 import math
 
 def quadratic_equation():
-
     """
     Description:
         In this function the two roots of quadratic equation is found.
