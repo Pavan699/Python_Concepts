@@ -14,8 +14,6 @@ def Print():
         Print the 2D-Array
     Parameter:
         None
-    Block:
-        None
     Return:
         None
     """  
@@ -40,7 +38,7 @@ def Print():
             for column in range(columns):
                 print(array_matrix[row][column], end=" ")
             print()
-            
+
     except Exception as e:
         print("Exception is: ",e)
 
