@@ -21,7 +21,7 @@ def triples(arr, n):
         for j in range(i+1, n-1):
             for k in range(j+1, n): 
                 if (arr[i] + arr[j] + arr[k] == 0):
-                    print(arr[i], arr[j], arr[k])
+                    print(arr[i], arr[j], arr[k]) #0,-1,1
                     flag = True
 
     # if flag remains False that means there are no elements having sum with 0

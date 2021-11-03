@@ -19,8 +19,8 @@ def wind_chill():
         None
     """   
     #User Inputs for temperature and wind-speed
-    temperature = float(input("Enter temperature in fahrenheit in between the range 0 to 50: "))
-    wind_speed = float(input( "Enter wind speed in between the range 3 to 120: "))
+    temperature = float(input("Enter temperature in fahrenheit in between the range 0 to 50 : "))
+    wind_speed = float(input("Enter wind speed in between the range 3 to 120 : "))
     # One of this condition gets true, wind chill can not calculated
     if(temperature > 50 or wind_speed < 3 or wind_speed > 120):
         print("Wind chill cannot be found for the entered condition")
