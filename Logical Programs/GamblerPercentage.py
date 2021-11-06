@@ -30,8 +30,7 @@ def gambler_game():
 
         if(stake > 0 and goal > stake):
             while not(stake == 0 or stake == goal): # Keeps looping until stake is 0 or equal to goal
-                bet = random.randint(0,1) # Generates two random numbers 0 and 1
-                print(bet)
+                bet = random.randint(0,1) # Generates two random numbers 0 and 1              
                 num_of_bets += 1
 
                 if bet == 0:

@@ -3,7 +3,7 @@
 @Date: 2021-11-03 02:13
 @Last Modified by: Pavan Nakate
 @Last Modified time: None
-@Title : TicTacToe : One player is user and one is computer 
+@Title : TicTacToe : Game between two players
 '''
 current_player = 'O'
 board = [ " " for x in range(10)]
@@ -39,7 +39,7 @@ def choose_position(player):
     """    
     try:
         print("Its your turn now: ", player)
-        position = int(input("Choose a position from 1-9 "))
+        position = int(input("Choose a position from 1-9 : "))
         position != 0
 
         if " " in board[position]:
