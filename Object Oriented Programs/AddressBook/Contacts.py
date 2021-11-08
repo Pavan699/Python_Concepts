@@ -13,6 +13,7 @@ class Contacts:
     Description:
         Class having functions to add,print,edit,delete the contacts 
     """
+    address_contact = []
     def print_contact():
         """
         Description:
@@ -37,7 +38,7 @@ class Contacts:
         Return:
             None
         """
-        address_contact = {}
+        
         first_Name = input("Enter First Name : ")
         def check_fname(firstName):
             """
@@ -152,12 +153,72 @@ class Contacts:
                 print("Invalid Email ID.")
 
         if check_fname(first_Name) and check_lname(last_Name) and check_address(address) and check_city(city) and check_state(state) and check_zip(zip) and check_phone_no(phone_No) and check_email(email):
-            address_contact = {"first_Name" : first_Name,"last_Name":last_Name,"address":address,"city": city,"state":state,"zip":zip,"phone_No":phone_No,"email":email}
+            address_contact = [ first_Name,last_Name,address,city,state,zip,phone_No,email]
             print(address_contact)
+            with open('NewAddContact.csv','w') as read_csv:
+                csv_writer = csv.writer(read_csv, lineterminator='\n')
+                header = ('first_Name','last_Name','address','city','state','zip','phone_No','email')
+
+                csv_writer.writerow(header)
+                csv_writer.writerow(address_contact)
+
         else:
             print("Invalid Contact.")
-            
+
+    def delete_contact():
+        """
+        Description:
+             Function to delete the name if it is present
+        Parameter:
+            None
+        Return:
+            None
+        """
+        del_name = input("Enter name to delete the contact : ")
+        flag = False
+        with open('Contact.csv','r') as read_csv:
+            csv_file = csv.reader(read_csv)
+
+            for contact in csv_file:
+                if contact[0] == del_name:
+                    print(f"{del_name} is Removed.")
+                    flag =True
+                else:
+                    print(contact)
+        
+        if flag == False:
+            print("Entred Name is not in the address-book")
+
+    def edit_contact():
+        """
+        Description:
+             Function to delete the name if it is present
+        Parameter:
+            None
+        Return:
+            None
+        """
+        edit_name = input("Enter name to delete the contact : ")
+        flag = False
+        with open('Contact.csv','r') as read_csv:
+            csv_file = csv.reader(read_csv)
+
+            for contact in csv_file:
+                if contact[0] == edit_name:
+                    first_Name = input("Enter First Name : ")
+                    last_Name = input("Enter Last Name : ")
+                    address = input("Enter Address : ")
+                    contact[0] = first_Name
+                    contact[1] = last_Name
+                    contact[2] = address
+                    print(contact)
+                    flag =True                
+        
+        if flag == False:
+            print("Entred Name is not in the address-book")
 
 if __name__ == "__main__":
     Contacts.print_contact()
     Contacts.add_contact()
+    Contacts.delete_contact()
+    Contacts.edit_contact()
