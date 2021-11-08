@@ -14,6 +14,7 @@ class Contacts:
         Class having functions to add,print,edit,delete the contacts 
     """
     address_contact = []
+
     def print_contact():
         """
         Description:
@@ -38,7 +39,6 @@ class Contacts:
         Return:
             None
         """
-        
         first_Name = input("Enter First Name : ")
         def check_fname(firstName):
             """
@@ -222,3 +222,4 @@ if __name__ == "__main__":
     Contacts.add_contact()
     Contacts.delete_contact()
     Contacts.edit_contact()
+
